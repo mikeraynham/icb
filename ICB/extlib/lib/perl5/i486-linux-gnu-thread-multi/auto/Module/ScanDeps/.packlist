@@ -1,0 +1,4 @@
+/srv/www/catalyst/icb/extlib/bin/scandeps.pl
+/srv/www/catalyst/icb/extlib/lib/perl5/Module/ScanDeps.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Module/ScanDeps/Cache.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Module/ScanDeps/DataFeed.pm

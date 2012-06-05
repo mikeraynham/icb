@@ -1,0 +1,90 @@
+{
+   "abstract" : "SQL DDL transformations and more",
+   "author" : [
+      "Ken Youens-Clark <kclark@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "open_source"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "SQL-Translator",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "lib/SQL/Translator/Schema/Graph",
+         "share",
+         "t",
+         "xt"
+      ],
+      "package" : [
+         "SQL::Translator::Schema::Graph"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59",
+            "Test::Differences" : "0",
+            "Test::Exception" : "0.31",
+            "Test::More" : "0.88",
+            "YAML" : "0.66"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59"
+         }
+      },
+      "runtime" : {
+         "recommends" : {
+            "GD" : "0",
+            "Graph::Directed" : "0",
+            "GraphViz" : "0",
+            "Spreadsheet::ParseExcel" : "0.41",
+            "Template" : "2.20",
+            "Text::ParseWords" : "0",
+            "Text::RecordParser" : "0.02",
+            "XML::LibXML" : "1.69"
+         },
+         "requires" : {
+            "Carp::Clan" : "0",
+            "Class::Base" : "0",
+            "Class::Data::Inheritable" : "0.02",
+            "DBI" : "0",
+            "Digest::SHA" : "0",
+            "ExtUtils::MakeMaker" : "6.11",
+            "File::ShareDir" : "1.0",
+            "File::Spec" : "0",
+            "IO::Scalar" : "2.110",
+            "Moo" : "0.009007",
+            "Parse::RecDescent" : "1.967009",
+            "Test::Differences" : "0",
+            "Test::Exception" : "0.31",
+            "Test::More" : "0.88",
+            "XML::Writer" : "0.500",
+            "YAML" : "0.66",
+            "perl" : "5.008001"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=SQL-Translator"
+      },
+      "license" : [
+         "http://opensource.org/licenses/gpl-license.php"
+      ],
+      "repository" : {
+         "url" : "git://git.shadowcat.co.uk/dbsrgits/SQL-Translator.git"
+      },
+      "x_Ratings" : "http://cpanratings.perl.org/d/SQL-Translator"
+   },
+   "version" : "0.11011",
+   "x_authority" : "cpan:JROBINSON"
+}

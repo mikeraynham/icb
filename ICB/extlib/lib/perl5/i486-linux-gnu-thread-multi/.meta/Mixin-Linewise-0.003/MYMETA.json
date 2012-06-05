@@ -1,0 +1,53 @@
+{
+   "abstract" : "write your linewise code for handles; this does the rest",
+   "author" : [
+      "Ricardo SIGNES, C<< <rjbs@cpan.org> >>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 0.92, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Mixin-Linewise",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "t",
+         "xt"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.42",
+            "Test::More" : "0.88"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.42"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "IO::File" : "0",
+            "IO::String" : "0",
+            "Sub::Exporter" : "0.9",
+            "perl" : "5.006"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.003",
+   "x_module_name" : "Mixin::Linewise"
+}

@@ -1,0 +1,42 @@
+{
+   "abstract" : "A module for merging hierarchies using the C3 algorithm",
+   "author" : [
+      "Stevan Little, E<lt>stevan@iinteractive.comE<gt>",
+      "Brandon L. Black, E<lt>blblack@gmail.comE<gt>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Algorithm-C3",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0.47"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0.01"
+         }
+      }
+   },
+   "provides" : {
+      "Algorithm::C3" : {
+         "file" : "lib/Algorithm/C3.pm",
+         "version" : "0.08"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.08"
+}

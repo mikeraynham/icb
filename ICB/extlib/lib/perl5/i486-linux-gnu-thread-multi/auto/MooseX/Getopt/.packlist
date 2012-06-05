@@ -1,0 +1,11 @@
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Basic.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Dashes.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/GLD.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Meta/Attribute.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Meta/Attribute/NoGetopt.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Meta/Attribute/Trait.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Meta/Attribute/Trait/NoGetopt.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/OptionTypeMap.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/ProcessedArgv.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Getopt/Strict.pm

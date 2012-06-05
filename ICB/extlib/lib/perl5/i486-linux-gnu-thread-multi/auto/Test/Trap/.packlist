@@ -1,0 +1,5 @@
+/srv/www/catalyst/icb/extlib/lib/perl5/Test/Trap.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Test/Trap/Builder.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Test/Trap/Builder/PerlIO.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Test/Trap/Builder/SystemSafe.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/Test/Trap/Builder/TempFile.pm

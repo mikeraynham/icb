@@ -1,0 +1,23 @@
+mkdir -p /srv/www/catalyst/icb/ICB/extlib
+
+cpanm --prompt -L /srv/www/catalyst/icb/ICB/extlib \
+  local::lib \
+  autodie \
+  Catalyst::Devel \
+  Catalyst::Action::REST \
+  Catalyst::View::Xslate \
+  CatalystX::Routes \
+  Chloro \
+  DBIx::Class \
+  DBIx::Class::EncodedColumn \
+  DBIx::Class::Schema::Loader \
+  DBIx::Class::TimeStamp \
+  MooseX::Configuration \
+  Text::Xslate
+
+eval $(perl -I/srv/www/catalyst/icb/ICB/extlib/lib/perl5 -Mlocal::lib=/srv/www/catalyst/icb/ICB/extlib)
+
+cd /srv/www/catalyst/icb
+catalyst.pl ICB
+cd ICB
+

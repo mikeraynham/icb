@@ -1,0 +1,60 @@
+{
+   "abstract" : "Automatically encode column values",
+   "author" : [
+      "Guillermo Roditi (groditi) <groditi@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 1.00, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "DBIx-Class-EncodedColumn",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "t"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "DBD::SQLite" : "0",
+            "Dir::Self" : "0",
+            "ExtUtils::MakeMaker" : "6.42",
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.42"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "DBD::SQLite" : "0",
+            "DBIx::Class" : "0.06002",
+            "Dir::Self" : "0",
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "Sub::Name" : "0.04",
+            "Test::More" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "git://github.com/wreis/DBIx-Class-EncodedColumn.git"
+      }
+   },
+   "version" : "0.00011"
+}

@@ -1,0 +1,13 @@
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Inheritable.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/AttrContainer.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/AttrContainer/Inheritable.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Class.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Map.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Method.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Method/MaybeWrapped.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Method/Wrapped.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Role.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Role/Application.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/MethodAttributes/Role/Meta/Role/Application/Summation.pm

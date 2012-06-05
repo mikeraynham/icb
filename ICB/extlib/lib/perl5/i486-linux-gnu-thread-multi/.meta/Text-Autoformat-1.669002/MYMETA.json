@@ -1,0 +1,27 @@
+{
+   "abstract" : "Automatic text wrapping and reformatting",
+   "author" : [
+      "Damian Conway <DCONWAY@CPAN.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "unknown"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Text-Autoformat",
+   "prereqs" : {
+      "runtime" : {
+         "requires" : {
+            "Test::More" : "0",
+            "Text::Reform" : "1.11",
+            "version" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "version" : "1.669002"
+}

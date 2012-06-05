@@ -1,0 +1,14 @@
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/Args.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/CGI.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/File.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/Getopt.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/State.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/AppConfig/Sys.pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::Args.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::CGI.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::File.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::Getopt.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::State.3pm
+/srv/www/catalyst/icb/extlib/man/man3/AppConfig::Sys.3pm

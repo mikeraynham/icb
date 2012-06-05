@@ -1,0 +1,4 @@
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Adopt/Class/Accessor/Fast.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Emulate/Class/Accessor/Fast.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Emulate/Class/Accessor/Fast/Meta/Accessor.pm
+/srv/www/catalyst/icb/extlib/lib/perl5/MooseX/Emulate/Class/Accessor/Fast/Meta/Role/Attribute.pm
