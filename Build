@@ -1,0 +1,85 @@
+curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+
+mkdir -p /srv/www/catalyst/icb/ICB/extlib
+
+cd /srv/www/catalyst/icb
+
+git init
+
+cd ICB
+
+cpanm -L extlib \
+  local::lib \
+  autodie \
+  Text::Xslate \
+  Catalyst::Devel \
+  Catalyst::Action::REST \
+  Catalyst::View::Xslate \
+  CatalystX::Routes \
+  Chloro \
+  DBIx::Class \
+  DBIx::Class::DeploymentHandler \
+  DBIx::Class::EncodedColumn \
+  DBIx::Class::TimeStamp \
+  MooseX::Configuration
+
+git add extlib
+git commit -m "Installed required CPAN modules."
+
+# Set local::lib to use the ICB extlib directory:
+
+eval $(perl -I/srv/www/catalyst/icb/ICB/extlib/lib/perl5 -Mlocal::lib=/srv/www/catalyst/icb/ICB/extlib)
+
+# Create the ICB Catalyst application:
+
+cd /srv/www/catalyst/icb
+catalyst.pl ICB
+
+# Test that the index page can be viewed and that it returns the default welcome page.
+
+cd /srv/www/catalyst/icb/ICB
+script/icb_server -d
+
+# Create an Xslate view:
+
+script/icb_create.pl view HTML Xslate
+
+# Configure Xslate view:
+
+<pre>
+diff --git a/ICB/lib/ICB.pm b/ICB/lib/ICB.pm
+index cab4465..f35f032 100644
+--- a/ICB/lib/ICB.pm
++++ b/ICB/lib/ICB.pm
+@@ -40,6 +40,10 @@ __PACKAGE__->config(
+     # Disable deprecated behavior needed by old applications
+     disable_component_resolution_regex_fallback => 1,
+     enable_catalyst_header => 1, # Send X-Catalyst header
++       default_view => 'HTML',
++       'View::HTML' => {
++               path => [ __PACKAGE__->path_to( 'root', 'template', 'html' ) ],
++       },
+ );
+ 
+ # Start the application
+</pre>
+
+
+
+# Remove the default welcome page:
+
+<pre>
+diff --git a/ICB/lib/ICB/Controller/Root.pm b/ICB/lib/ICB/Controller/Root.pm
+index 46f8783..213325b 100644
+--- a/ICB/lib/ICB/Controller/Root.pm
++++ b/ICB/lib/ICB/Controller/Root.pm
+@@ -30,7 +30,7 @@ sub index :Path :Args(0) {
+     my ( $self, $c ) = @_;
+ 
+     # Hello World
+-    $c->response->body( $c->welcome_message );
++    #$c->response->body( $c->welcome_message );
+ }
+ 
+ =head2 default
+</pre>

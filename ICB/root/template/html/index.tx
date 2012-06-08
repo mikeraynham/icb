@@ -1,0 +1,6 @@
+: cascade wrapper
+: around body->{
+<h1>Hello, world!</h1>
+<p><: $c.uri_for( '/' ) :></p>
+<p><: $c.action :></p>
+: }
