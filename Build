@@ -40,13 +40,10 @@ catalyst.pl ICB
 cd /srv/www/catalyst/icb/ICB
 script/icb_server -d
 
-# Create an Xslate view:
+# Create and configure an Xslate view:
 
 script/icb_create.pl view HTML Xslate
 
-# Configure Xslate view:
-
-<pre>
 diff --git a/ICB/lib/ICB.pm b/ICB/lib/ICB.pm
 index cab4465..f35f032 100644
 --- a/ICB/lib/ICB.pm
@@ -62,13 +59,9 @@ index cab4465..f35f032 100644
  );
  
  # Start the application
-</pre>
-
-
 
 # Remove the default welcome page:
 
-<pre>
 diff --git a/ICB/lib/ICB/Controller/Root.pm b/ICB/lib/ICB/Controller/Root.pm
 index 46f8783..213325b 100644
 --- a/ICB/lib/ICB/Controller/Root.pm
@@ -82,4 +75,46 @@ index 46f8783..213325b 100644
  }
  
  =head2 default
-</pre>
+
+# Create a directory for the HTML templates:
+cd /srv/www/catalyst/icb/ICB
+mkdir -p root/template/html
+
+# Create a wrapper template:
+
+new file mode 100644
+index 0000000..f4d04ed
+--- /dev/null
++++ b/ICB/root/template/html/wrapper.tx
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++       <head>
++               <meta charset="utf-8">
++               <title>Inca Cafè Bar</title>
++               <meta name="viewport" content="width=device-width, initial-scale
++               <meta name="description" content="">
++               <meta name="author" content="">
++       </head>
++
++       <body>
++               : block body->{}
++               <script type="text/javascript" src="http://ajax.googleapis.com/a
++       </body>
++</html>
+
+# Add an index page template:
+
+new file mode 100644
+index 0000000..4ed33ac
+--- /dev/null
++++ b/ICB/root/template/html/index.tx
+@@ -0,0 +1,6 @@
++: cascade wrapper
++: around body->{
++<h1>Hello, world!</h1>
++<p><: $c.uri_for( '/' ) :></p>
++<p><: $c.action :></p>
++: }
+
+
