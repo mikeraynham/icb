@@ -17,10 +17,12 @@ cpanm -L extlib \
   Catalyst::View::Xslate \
   CatalystX::Routes \
   Chloro \
+  CSS::Minifier::XS \
   DBIx::Class \
   DBIx::Class::DeploymentHandler \
   DBIx::Class::EncodedColumn \
   DBIx::Class::TimeStamp \
+  JavaScript::Minifier::XS \
   MooseX::Configuration
 
 git add extlib
@@ -113,8 +115,8 @@ index 0000000..4ed33ac
 +: cascade wrapper
 +: around body->{
 +<h1>Hello, world!</h1>
-+<p><: $c.uri_for( '/' ) :></p>
-+<p><: $c.action :></p>
 +: }
+
+# Test that the index page can be viewed and that it returns the 'Hello, World!' content.
 
 
