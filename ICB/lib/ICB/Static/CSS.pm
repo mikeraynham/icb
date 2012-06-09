@@ -17,8 +17,6 @@ sub _build_minifier {
     return \&CSS::Minifier::XS::minify;
 }
 
-sub _content_type {
-    'text/css';
-}
+sub _content_type () { 'text/css' }
 
 1;
