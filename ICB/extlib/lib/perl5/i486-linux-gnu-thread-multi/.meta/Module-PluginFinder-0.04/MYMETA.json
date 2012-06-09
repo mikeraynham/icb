@@ -1,0 +1,44 @@
+{
+   "abstract" : "automatically choose the most appropriate plugin\nmodule.",
+   "author" : [
+      "Paul Evans <leonerd@leonerd.org.uk>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Module-PluginFinder",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "File::Spec" : "0",
+            "Test::Exception" : "0",
+            "Test::More" : "0",
+            "Test::Warn" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Module::Pluggable::Object" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Module::PluginFinder" : {
+         "file" : "lib/Module/PluginFinder.pm",
+         "version" : "0.04"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.04"
+}
