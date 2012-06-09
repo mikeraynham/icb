@@ -2,6 +2,8 @@ package ICB::Controller::Root;
 use Moose;
 use namespace::autoclean;
 
+use CatalystX::Routes;
+
 BEGIN { extends 'Catalyst::Controller' }
 
 #
@@ -26,12 +28,14 @@ The root page (/)
 
 =cut
 
-sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
+get_html q{}
+    => args 0
+    => sub {
+    my $self = shift;
+    my $c    = shift;
 
-    # Hello World
-    #$c->response->body( $c->welcome_message );
-}
+    $c->stash( template => 'index.tx' );
+};
 
 =head2 default
 
@@ -39,7 +43,7 @@ Standard 404 error page
 
 =cut
 
-sub default :Path {
+sub default :Chained('/') :PathPart('') :Args() {
     my ( $self, $c ) = @_;
     $c->response->body( 'Page not found' );
     $c->response->status(404);
@@ -51,7 +55,7 @@ Attempt to render a view, if needed.
 
 =cut
 
-sub end : ActionClass('RenderView') {}
+sub end :ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
