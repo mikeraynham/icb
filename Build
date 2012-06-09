@@ -22,6 +22,7 @@ cpanm -L extlib \
   DBIx::Class::DeploymentHandler \
   DBIx::Class::EncodedColumn \
   DBIx::Class::TimeStamp \
+  IPC::System::Simple \
   JavaScript::Minifier::XS \
   MooseX::Configuration
 
@@ -119,4 +120,51 @@ index 0000000..4ed33ac
 
 # Test that the index page can be viewed and that it returns the 'Hello, World!' content.
 
+# Switch to using CatalystX::Routes.  CatalystX::Routes creates chained actions, and these have a lower priority than :Path actions.  It is therefore necessary to change the default handler to a chained handler to prevent it from overriding the index page.  By not specifying the number of arguments, it will have a lower priority than the index action.
+
+diff --git a/ICB/lib/ICB/Controller/Root.pm b/ICB/lib/ICB/Controller/Root.pm
+index 213325b..efaf2d3 100644
+--- a/ICB/lib/ICB/Controller/Root.pm
++++ b/ICB/lib/ICB/Controller/Root.pm
+@@ -2,6 +2,8 @@ package ICB::Controller::Root;
+ use Moose;
+ use namespace::autoclean;
+ 
++use CatalystX::Routes;
++
+ BEGIN { extends 'Catalyst::Controller' }
+ 
+ #
+@@ -26,12 +28,14 @@ The root page (/)
+ 
+ =cut
+ 
+-sub index :Path :Args(0) {
+-    my ( $self, $c ) = @_;
++get_html q{}
++    => args 0
++    => sub {
++    my $self = shift;
++    my $c    = shift;
+ 
+-    # Hello World
+-    #$c->response->body( $c->welcome_message );
+-}
++    $c->stash( template => 'index.tx' );
++};
+ 
+ =head2 default
+ 
+@@ -39,7 +43,7 @@ Standard 404 error page
+ 
+ =cut
+ 
+-sub default :Path {
++sub default :Chained('/') :PathPart('') :Args() {
+     my ( $self, $c ) = @_;
+     $c->response->body( 'Page not found' );
+     $c->response->status(404);
+@@ -51,7 +55,7 @@ Attempt to render a view, if needed.
+ 
+ =cut
 
