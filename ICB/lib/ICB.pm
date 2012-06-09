@@ -26,6 +26,10 @@ extends 'Catalyst';
 
 our $VERSION = '0.01';
 
+with qw/
+    ICB::Role::Context::EmptyDetach
+/;
+
 # Configure the application.
 #
 # Note that settings in icb.conf (or other external
