@@ -4266,3 +4266,25 @@ C<EXE_FILES: >
 
 =back
 
+=head2 Sat Jun  9 21:22:17 2012: C<Module> L<IPC::System::Simple|IPC::System::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /srv/www/catalyst/icb/ICB/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.21>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
