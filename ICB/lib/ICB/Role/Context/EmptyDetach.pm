@@ -10,6 +10,7 @@ sub empty_detach {
     my $self   = shift;
     my $status = shift;
 
+    $self->response->content_length( 0 );
     $self->response->status( $status ) if $status;
     $self->response->body('');
     $self->detach();
