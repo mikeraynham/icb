@@ -3,10 +3,10 @@ use warnings;
 
 use Test::More;
 
-use ICB::Static::Factory;
+use ICB::Factory::Static;
 
 {
-    my $factory = ICB::Static::Factory->new( content_type => 'text/css' );
+    my $factory = ICB::Factory::Static->new( content_type => 'text/css' );
     my $css     = $factory->construct(
         date_stamp => '20120101',
         time_stamp => '120000',

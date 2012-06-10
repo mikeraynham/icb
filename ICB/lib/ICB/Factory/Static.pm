@@ -1,4 +1,4 @@
-package ICB::Static::Factory;
+package ICB::Factory::Static;
 
 use strict;
 use warnings;
