@@ -3,9 +3,6 @@ package ICB::Static::CSS;
 use strict;
 use warnings;
 
-use autodie qw/ :all /;
-use Carp;
-
 use Moose;
 
 with qw/
@@ -18,5 +15,9 @@ sub _build_minifier {
 }
 
 sub _content_type () { 'text/css' }
+
+sub _get_file_list {
+
+};
 
 1;
