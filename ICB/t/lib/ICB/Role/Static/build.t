@@ -5,9 +5,12 @@ use Test::More;
 
 package Foo;
 
+use CSS::Minifier::XS;
+
 use Moose;
 with 'ICB::Role::Static';
 
+sub _build_minifier { \&CSS::Minifier::XS::minify }
 sub _content_type () { 'text/css' }
 
 package main;
@@ -15,7 +18,7 @@ package main;
 use Path::Class qw/ file dir /;
 
 # This is the 'combined' directory in the test directory.
-my $root_dir = file( __FILE__)->absolute->dir->subdir( 'combine' );
+my $root_dir = file( __FILE__)->dir->subdir( 'combine' )->absolute;
 
 my $foo = Foo->new(
     base       => 'css',
@@ -26,7 +29,7 @@ my $foo = Foo->new(
 );
 
 is( $foo->_list_file,
-    $root_dir->file( 'css', 'icb.css.list'),
+    $root_dir->file( 'icb.css.list'),
     '_list_file correct'
 );
 
@@ -40,4 +43,7 @@ is_deeply(
     '_file_list correct'
 );
 
+my $content = $foo->_process_files();
+print $content;
+print "\n";
 done_testing();

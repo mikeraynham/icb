@@ -16,8 +16,4 @@ sub _build_minifier {
 
 sub _content_type () { 'text/css' }
 
-sub _get_file_list {
-
-};
-
 1;

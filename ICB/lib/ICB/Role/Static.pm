@@ -69,7 +69,6 @@ sub _build__list_file {
 
     return file(
         $self->_root_dir,
-        $self->base,
         $self->path . '.list'
     );
 }
@@ -90,6 +89,22 @@ sub _file_list {
         mode => O_RDONLY;
 
     return \@file_list;
+}
+
+sub _process_files {
+    my $self  = shift;
+    my @files = @{ $self->_file_list };
+
+    my $combined;
+
+    foreach ( @files ) {
+        my $content = file( $self->_root_dir, $self->base, $_ )->slurp;
+        $content    = $self->process( $content ) if $self->can( 'process' );
+        $content    = $self->minify( $content );
+        $combined  .= "$content\n";
+    }
+
+    return $combined;
 }
 
 1;
