@@ -16,20 +16,25 @@ sub _content_type () { 'text/css' }
 package main;
 
 use Path::Class qw/ file dir /;
+use File::Temp;
 
 # This is the 'combined' directory in the test directory.
-my $root_dir = file( __FILE__)->dir->subdir( 'combine' )->absolute;
+my $combine_dir = file( __FILE__)->dir->subdir( 'combine' )->absolute;
+
+# Create a temporary directory in which to output the combined file.
+my $static_dir = dir( File::Temp->newdir() );
 
 my $foo = Foo->new(
-    base       => 'css',
-    date_stamp => '20120601',
-    time_stamp => '120000',
-    path       => 'icb.css',
-    _root_dir  => $root_dir,
+    base        => 'css',
+    date_stamp  => '20120601',
+    time_stamp  => '120000',
+    path        => 'icb.css',
+    combine_dir => $combine_dir,
+    static_dir  => $static_dir,
 );
 
 is( $foo->_list_file,
-    $root_dir->file( 'icb.css.list'),
+    $combine_dir->file( $foo->base, $foo->path . ".list" ),
     '_list_file correct'
 );
 
@@ -43,7 +48,31 @@ is_deeply(
     '_file_list correct'
 );
 
-my $content = $foo->_process_files();
-print $content;
-print "\n";
+my $combined = $foo->_process_files(); 
+
+like(
+    $combined,
+    qr/font-size.*line-height.*icb-brown/s,
+    'Combined content looks correct'
+);
+
+my $output_file = $static_dir->file(
+    $foo->base,
+    $foo->date_stamp,
+    $foo->time_stamp,
+    $foo->path
+);
+
+is( $foo->output_file,
+    $output_file,
+    'output_file correct'
+);
+ 
+$foo->combine_and_create();
+
+is( $output_file->slurp(),
+    $combined,
+    'output file content correct'
+);
+
 done_testing();

@@ -3,7 +3,8 @@ package ICB::Role::Static;
 use strict;
 use warnings;
 
-use Path::Class qw/ file /;
+use Carp;
+use Path::Class qw/ dir file /;
 use Fcntl 'O_RDONLY';
 use Tie::File;
 
@@ -26,6 +27,7 @@ has base        => (
     isa         => 'Str',
     required    => 1,
 );
+
 has date_stamp  => (
     is          => 'ro',
     isa         => 'Int',
@@ -45,11 +47,25 @@ has path        => (
     coerce      => 1,
 );
 
-has _root_dir   => (
+has combine_dir => (
     is          => 'ro',
     isa         => 'Path::Class::Dir',
     lazy_build  => 1,
     coerce      => 1,
+);
+
+has static_dir  => (
+    is          => 'ro',
+    isa         => 'Path::Class::Dir',
+    lazy_build  => 1,
+    coerce      => 1,
+);
+
+has output_file => (
+    is          => 'ro',
+    isa         => 'Path::Class::File',
+    lazy_build  => 1,
+    init_arg    => undef,
 );
 
 has _list_file  => (
@@ -58,17 +74,41 @@ has _list_file  => (
     lazy_build  => 1,
 );
 
-sub _build__root_dir {
+sub _build_combine_dir {
     # TODO
-    # Get the root dir from config.
+    # Get from config and pass to constructor.
     return '/srv/www/catalyst/icb/ICB/root/combine/';
+}
+
+sub _build_static_dir {
+    # TODO
+    # Get from config and pass to constructor.
+    return '/srv/www/catalyst/icb/ICB/root/static/';
+}
+
+sub _build_output_file {
+    my $self = shift;
+    my $dir  = dir(
+        $self->static_dir,
+        $self->base,
+        $self->date_stamp,
+        $self->time_stamp,
+    );
+
+    $dir->mkpath( undef, '0755' );
+    
+    carp "Cannot create '$dir'"
+        unless -d $dir;
+
+    return $dir->file( $self->path ); 
 }
 
 sub _build__list_file {
     my $self = shift;
 
     return file(
-        $self->_root_dir,
+        $self->combine_dir,
+        $self->base,
         $self->path . '.list'
     );
 }
@@ -77,6 +117,15 @@ sub handles_content_type {
     my $self         = shift;
     my $content_type = shift;
     return $self->_content_type eq $content_type;
+}
+
+sub combine_and_create {
+    my $self     = shift;
+    my $combined = $self->_process_files();
+    my $fh       = $self->output_file->openw();
+
+    print $fh $combined;
+    close $fh;
 }
 
 sub _file_list {
@@ -98,7 +147,7 @@ sub _process_files {
     my $combined;
 
     foreach ( @files ) {
-        my $content = file( $self->_root_dir, $self->base, $_ )->slurp;
+        my $content = file( $self->combine_dir, $self->base, $_ )->slurp;
         $content    = $self->process( $content ) if $self->can( 'process' );
         $content    = $self->minify( $content );
         $combined  .= "$content\n";
