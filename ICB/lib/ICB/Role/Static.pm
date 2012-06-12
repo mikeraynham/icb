@@ -13,6 +13,7 @@ use MooseX::Types::Path::Class;
 
 requires qw/
     _content_type
+    process
 /;
 
 has minifier    => (
@@ -147,9 +148,8 @@ sub _process_files {
     my $combined;
 
     foreach ( @files ) {
-        my $content = file( $self->combine_dir, $self->base, $_ )->slurp;
-        $content    = $self->process( $content ) if $self->can( 'process' );
-        $content    = $self->minify( $content );
+        my $file    = file( $self->combine_dir, $self->base, $_ );
+        my $content = $self->process( $file );
         $combined  .= "$content\n";
     }
 

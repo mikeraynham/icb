@@ -11,7 +11,8 @@ use Moose;
 with 'ICB::Role::Static';
 
 sub _build_minifier { \&CSS::Minifier::XS::minify }
-sub _content_type () { 'text/css' }
+sub _content_type   { 'text/css' }
+sub process         { shift; shift->slurp() }
 
 package main;
 
@@ -52,7 +53,7 @@ my $combined = $foo->_process_files();
 
 like(
     $combined,
-    qr/font-size.*line-height.*icb-brown/s,
+    qr/font-size.*line-height.*background:/s,
     'Combined content looks correct'
 );
 
