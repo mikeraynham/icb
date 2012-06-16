@@ -13,7 +13,7 @@ use MooseX::Types::Path::Class;
 
 requires qw/
     _content_type
-    process
+    _process
 /;
 
 has minifier    => (
@@ -114,21 +114,6 @@ sub _build__list_file {
     );
 }
 
-sub handles_content_type {
-    my $self         = shift;
-    my $content_type = shift;
-    return $self->_content_type eq $content_type;
-}
-
-sub combine_and_create {
-    my $self     = shift;
-    my $combined = $self->_process_files();
-    my $fh       = $self->output_file->openw();
-
-    print $fh $combined;
-    close $fh;
-}
-
 sub _file_list {
     my $self = shift;
     my @file_list;
@@ -149,9 +134,29 @@ sub _process_files {
 
     foreach ( @files ) {
         my $file    = file( $self->combine_dir, $self->base, $_ );
-        my $content = $self->process( $file );
+        my $content = $self->_process( $file ) // '';
         $combined  .= "$content\n";
     }
+
+    return $combined;
+}
+
+sub handles_content_type {
+    my $self         = shift;
+    my $content_type = shift;
+
+    return $self->_content_type eq $content_type;
+}
+
+sub combine_and_create {
+    my $self = shift;
+    
+    return unless my $combined = $self->_process_files();
+
+    my $fh = $self->output_file->openw();
+
+    print $fh $combined;
+    close $fh;
 
     return $combined;
 }
