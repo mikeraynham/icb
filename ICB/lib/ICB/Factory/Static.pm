@@ -14,6 +14,12 @@ has content_type => (
     required     => 1,
 );
 
+has file_type    => (
+    is           => 'ro',
+    isa          => 'Str',
+    required     => 1,
+);
+
 has _finder      => (
     is           => 'ro',
     isa          => 'Module::PluginFinder',
@@ -24,16 +30,25 @@ has _finder      => (
 sub _build__finder {
     return Module::PluginFinder->new(
         search_path => 'ICB::Static',
-        typefunc    => '_content_type',
+        filter      => sub {
+            my $module = shift;
+            my $type   = shift;
+            $module->handles_type( $type );
+        },
     );
 }
 
 sub construct {
     my $self = shift;
 
-    return $self->_finder->construct( $self->content_type, @_ )
-        or croak 'Cannot find an ICB::Static module that handles ' .
-           $self->content_type;
+    return $self->_finder->construct(
+        {
+            content_type => $self->content_type,
+            file_type    => $self->file_type,
+        },
+        @_
+    ) or croak 'Cannot find an ICB::Static module that handles ' .
+        $self->content_type;
 };
 
 1;

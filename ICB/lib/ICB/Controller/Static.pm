@@ -4,7 +4,7 @@ use namespace::autoclean;
 
 use Path::Class qw/ file /;
 use ICB::Factory::Static;
-use Data::Dumper;
+
 use CatalystX::Routes;
 
 BEGIN { extends 'Catalyst::Controller'; }
@@ -40,10 +40,11 @@ get '/static'
     $c->empty_detach( 404 ) unless ( $time =~ /^\d{6}$/  );
 
     my $content_type = $c->request->preferred_content_type;
-    $c->response->content_type( $content_type );
+    my ($file_type)  = file( @path )->basename =~ /\.([^.]+)$/;
 
     my $factory = ICB::Factory::Static->new(
         content_type => $content_type,
+        file_type    => $file_type,
     );
 
     my $static = $factory->construct(
@@ -55,6 +56,7 @@ get '/static'
 
     my $response = $static->combine_and_create;
 
+    $c->response->content_type( $static->content_type );
     $c->response->body( $response // '' );
 };
 

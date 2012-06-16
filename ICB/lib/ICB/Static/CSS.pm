@@ -33,14 +33,14 @@ sub _build_lessc_bin {
     return $bin;
 }
 
-sub _content_type { 'text/css' }
+sub content_type { 'text/css' }
+sub file_type    { 'css'      }
 
-sub _process {
+sub _process_file {
     my $self    = shift;
     my $file    = shift;
-    my $content = capturex( $self->lessc_bin, $file ); 
-
-    return $self->minify( $content );
+    
+    return capturex( $self->lessc_bin, $file ); 
 }
 
 1;

@@ -7,13 +7,14 @@ use Carp;
 use Path::Class qw/ dir file /;
 use Fcntl 'O_RDONLY';
 use Tie::File;
+use File::Temp;
 
 use Moose::Role;
 use MooseX::Types::Path::Class;
 
 requires qw/
-    _content_type
-    _process
+    content_type
+    file_type
 /;
 
 has minifier    => (
@@ -133,34 +134,46 @@ sub _file_list {
     return \@file_list;
 }
 
-sub _process_files {
+sub _combine_files {
     my $self  = shift;
     my @files = @{ $self->_file_list };
     my $combined;
 
     foreach ( @files ) {
-        my $file    = file( $self->combine_dir, $self->base, $_ );
+        s/#.*//;
+        next if /^\s*$/;
+
+        my $file = file( $self->combine_dir, $self->base, $_ );
         carp( "'$file' does not exist" ), next unless -f $file;
 
-        my $content = $self->_process( $file );
-        $combined  .= "$content\n";
+        if ( $self->can( '_process_file' ) ) {
+            $combined .= $self->_process_file( $file );
+        } else {
+            $combined .=  $file->slurp();
+        }
     }
 
     return $combined;
 }
 
-sub handles_content_type {
-    my $self         = shift;
-    my $content_type = shift;
+sub handles_type {
+    my $self = shift;
+    my $type = shift;
 
-    return $self->_content_type eq $content_type;
+    return 1 if $self->content_type eq $type->{content_type};
+    return 1 if $self->file_type    eq $type->{file_type};
 }
 
 sub combine_and_create {
     my $self = shift;
 
-    return unless my $combined = $self->_process_files();
+    # Stitch the files together first.
+    return unless my $combined = $self->_combine_files();
 
+    # Minify the combined and processed result.
+    return unless $self->minify( $combined );
+
+    # Write the final result to the static file.
     my $fh = $self->output_file->openw();
 
     print $fh $combined;

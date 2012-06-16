@@ -28,7 +28,10 @@ is( $css->_list_file,
     '_list_file correct'
 );
 
-ok( $css->handles_content_type( 'text/css' ),
+ok( $css->handles_type({
+        content_type => 'text/css',
+        file_type    => 'css',
+    }),
     'ICB::Static::CSS handles text/css'
 );
 
