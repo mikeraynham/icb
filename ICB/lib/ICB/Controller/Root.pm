@@ -28,9 +28,7 @@ The root page (/)
 
 =cut
 
-get_html q{}
-    => args 0
-    => sub {
+sub index : Path : Args( 0 ) {
     my $self = shift;
     my $c    = shift;
 
@@ -43,11 +41,14 @@ Standard 404 error page
 
 =cut
 
-sub default :Chained('/') :PathPart('') :Args() {
+get 'default'
+    => chained '/'
+    => path_part ''
+    => sub {
     my ( $self, $c ) = @_;
     $c->response->body( 'Page not found' );
     $c->response->status(404);
-}
+};
 
 =head2 end
 
