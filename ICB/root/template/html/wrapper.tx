@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
+        <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120609', '183000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
