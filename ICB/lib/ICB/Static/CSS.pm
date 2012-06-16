@@ -3,6 +3,7 @@ package ICB::Static::CSS;
 use strict;
 use warnings;
 
+use Carp;
 use File::Which;
 use IPC::System::Simple qw/ capturex /;
 
@@ -24,7 +25,7 @@ sub _build_minifier {
 }
 
 sub _build_lessc_bin {
-    my $bin = which('lessc') // '/usr/local/bin/lessc';
+    my $bin = which('lessc') || '/usr/local/bin/lessc';
 
     croak 'Cannot find lessc binary'
         unless -f $bin;
@@ -34,10 +35,11 @@ sub _build_lessc_bin {
 
 sub _content_type { 'text/css' }
 
-sub process {
+sub _process {
     my $self    = shift;
     my $file    = shift;
-    my $content = capturex( $self->lessc_bin, $content ); 
+    my $content = capturex( $self->lessc_bin, $file->slurp ); 
+
     return $self->minify( $content );
 }
 
