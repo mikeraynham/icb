@@ -47,10 +47,10 @@ get '/static'
     );
 
     my $static = $factory->construct(
-        base       => $base,
-        date_stamp => $date,
-        time_stamp => $time,
-        path       => @path,
+        base => $base,
+        date => $date,
+        time => $time,
+        path => @path,
     );
 
     my $response = $static->combine_and_create;

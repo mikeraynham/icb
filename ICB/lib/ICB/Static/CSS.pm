@@ -38,7 +38,7 @@ sub _content_type { 'text/css' }
 sub _process {
     my $self    = shift;
     my $file    = shift;
-    my $content = capturex( $self->lessc_bin, $file->slurp ); 
+    my $content = capturex( $self->lessc_bin, $file ); 
 
     return $self->minify( $content );
 }
