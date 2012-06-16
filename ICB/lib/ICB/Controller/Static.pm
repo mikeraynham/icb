@@ -3,7 +3,8 @@ use Moose;
 use namespace::autoclean;
 
 use Path::Class qw/ file /;
-
+use ICB::Factory::Static;
+use Data::Dumper;
 use CatalystX::Routes;
 
 BEGIN { extends 'Catalyst::Controller'; }
@@ -25,87 +26,36 @@ Catalyst Controller.
 Catalyst::Action::REST
 =cut
 
-chain_point '_static'
-    => chained '/'
-    => path_part 'static'
-    => capture_args 0
-    => sub {
-    my $self = shift;
-    my $c    = shift;
-    
-    $c->stash( content_type => $c->request->preferred_content_type );
-    $c->response->content_type( $c->stash->{content_type} );
-};
-
-chain_point '_base'
-    => chained '_static'
-    => path_part ''
-    => capture_args 1
+get '/static'
     => sub {
     my $self = shift;
     my $c    = shift;
     my $base = shift;
-
-    $c->log->debug( "_base: $base" );
-
-    $c->empty_detach( 404 )
-        unless ( $base =~ /^[a-z]+$/ );
-
-    $c->stash( base => $base );
-};
-
-chain_point '_date'
-    => chained '_base'
-    => path_part ''
-    => capture_args 1
-    => sub {
-    my $self = shift;
-    my $c    = shift;
     my $date = shift;
-
-    $c->log->debug( "_date: $date" );
-
-    $c->empty_detach( 404 )
-        unless ( $date =~ /^\d{8}$/ );
-
-    $c->stash( date => $date );
-};
-
-chain_point '_time'
-    => chained '_date'
-    => path_part ''
-    => capture_args 1
-    => sub {
-    my $self = shift;
-    my $c    = shift;
     my $time = shift;
+    my @path = @_;
 
-    $c->log->debug( "_time: $time" );
+    $c->empty_detach( 404 ) unless ( $base =~ /^[a-z]+$/ );
+    $c->empty_detach( 404 ) unless ( $date =~ /^\d{8}$/  );
+    $c->empty_detach( 404 ) unless ( $time =~ /^\d{6}$/  );
 
-    $c->empty_detach( 404 )
-        unless ( $time =~ /^\d{6}$/ );
-        
-    $c->stash( time => $time );
-};
+    my $content_type = $c->request->preferred_content_type;
+    $c->response->content_type( $content_type );
 
-get 'path'
-    => chained '_time'
-    => path_part ''
-    => sub {
-    my $self = shift;
-    my $c    = shift;
-    my $file = file(
-        $c->stash->{base},
-        $c->stash->{date},
-        $c->stash->{time},
-        @_
+    my $factory = ICB::Factory::Static->new(
+        content_type => $content_type,
     );
 
-    $c->log->debug( '_path' );
+    my $static = $factory->construct(
+        base       => $base,
+        date_stamp => $date,
+        time_stamp => $time,
+        path       => @path,
+    );
 
-    $c->log->debug( $c->stash->{content_type} );
-    $c->log->debug( $file );
-    $c->response->body( $file );
+    my $response = $static->combine_and_create;
+
+    $c->response->body( $response // '' );
 };
 
 =head1 AUTHOR
