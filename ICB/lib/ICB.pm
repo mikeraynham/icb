@@ -48,6 +48,9 @@ __PACKAGE__->config(
 	'View::HTML' => {
 		path => [ __PACKAGE__->path_to( 'root', 'template', 'html' ) ],
 	},
+    'Plugin::Static::Simple' => {
+        ignore_extensions => [ qw/ css js / ],
+    },
 );
 
 # Start the application
