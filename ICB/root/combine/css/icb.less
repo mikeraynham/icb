@@ -20,13 +20,20 @@ body {
         text-indent:    -9999px;
         background:     url('/static/images/inca-cafe-bar.png') no-repeat left center;
         width:          @icb_width;
+        height:         @icb_height;
+        margin-left:    10px;
+        padding:        10px 20px 10px 10px;
     }
 
     .nav {
         .active > a, .active > a:hover {
-            background-color: none;
-            border-bottom: 2px solid @icb-brown-dark;
+            background-color: transparent;
+            border-bottom: 3px solid @icb-cream-dark;
         }
+    }
+
+    .nav > li > a {
+        padding-bottom: 2px;
     }
 }
 
