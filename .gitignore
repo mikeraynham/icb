@@ -1,3 +1,5 @@
 *.swp
 cover_db/
 nytprof.out
+root/static/css/
+root/static/js/
