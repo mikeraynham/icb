@@ -25,7 +25,7 @@ sub _build_minifier {
 }
 
 sub _build_lessc_bin {
-    my $bin = which('lessc') || '/usr/local/bin/lessc';
+    my $bin = which('lessc') // '/usr/local/bin/lessc';
 
     croak 'Cannot find lessc binary'
         unless -f $bin;
