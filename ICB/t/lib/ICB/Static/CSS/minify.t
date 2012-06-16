@@ -7,9 +7,10 @@ use ICB::Static::CSS;
 
 {
     my $css = ICB::Static::CSS->new(
+        base       => 'css',
         date_stamp => '20120101',
         time_stamp => '120000',
-        path       => 'css/custom.css',
+        path       => 'custom.css',
     );
 
     isa_ok( $css->minifier, 'CODE' );

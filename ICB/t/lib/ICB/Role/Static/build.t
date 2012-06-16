@@ -12,7 +12,7 @@ with 'ICB::Role::Static';
 
 sub _build_minifier { \&CSS::Minifier::XS::minify }
 sub _content_type   { 'text/css' }
-sub process         { shift; shift->slurp() }
+sub _process         { shift; shift->slurp() }
 
 package main;
 
