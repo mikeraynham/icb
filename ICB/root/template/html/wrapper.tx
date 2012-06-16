@@ -37,7 +37,9 @@
             : block body->{}
         </div>
 
-		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120609', '183000', 'icb.js' ) :>"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        : block js->{}
+		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120609', '183000', 'icb.js' ) :>"></script>
+
 	</body>
 </html>

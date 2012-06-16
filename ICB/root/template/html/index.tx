@@ -1,23 +1,27 @@
 : cascade wrapper
 : around body->{
-    <div class="hero-unit">
-        <h1>Welcome to Inca Café Bar!</h1>
-        <p>Inca ca ca ca!</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    </div>
+        <div class="hero-unit">
+            <h1>Welcome to Inca Café Bar!</h1>
+            <p>Inca ca ca ca!</p>
+            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
 
-    <div class="row">
-        <div class="span4">
-            <h2>It's a café...</h2>
-            <p>Inca ca ca ca!</p>
+        <div class="row">
+            <div class="span4">
+                <h2>It's a café...</h2>
+                <p>Inca ca ca ca!</p>
+            </div>
+            <div class="span4">
+                <h2>It's a bar...</h2>
+                <p>Inca ca ca ca!</p>
+            </div>
+            <div class="span4">
+                <h2>It's...</h2>
+                <div id="map_canvas"></div>
+            </div>
         </div>
-        <div class="span4">
-            <h2>It's a bar...</h2>
-            <p>Inca ca ca ca!</p>
-        </div>
-        <div class="span4">
-            <h2>It's...</h2>
-            <p>Inca ca ca ca!</p>
-        </div>
-    </div>
+: }
+
+: around js->{
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoLHF__hkLdtQNs95PZw_kQ0etXGufKdI&sensor=false"></script>
 : }

@@ -9,7 +9,7 @@ body {
     h1 {
         height:         @logo_height;
         width:          100%;
-        background:     url('/static/images/logo.png') no-repeat center top;
+        background:     url('/static/img/logo.png') no-repeat center top;
         text-indent:    -9990px;
         margin-top:     -5px;
     }
@@ -18,7 +18,7 @@ body {
 .navbar {
     .brand {
         text-indent:    -9999px;
-        background:     url('/static/images/inca-cafe-bar.png') no-repeat left center;
+        background:     url('/static/img/inca-cafe-bar.png') no-repeat left center;
         width:          @icb_width;
         height:         @icb_height;
         margin-left:    10px;
@@ -28,7 +28,6 @@ body {
     .nav {
         .active > a, .active > a:hover {
             background-color: transparent;
-            border-bottom: 3px solid @icb-cream-dark;
         }
     }
 
@@ -38,6 +37,10 @@ body {
 }
 
 .navbar-inner {
-    background:     url('/static/images/navbar.png') repeat-x left bottom;
+    background:     url('/static/img/navbar.png') repeat-x left bottom;
     
+}
+
+#map_canvas {
+   height:          @gridColumnWidth * 5; 
 }
