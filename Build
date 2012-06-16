@@ -22,6 +22,7 @@ cpanm -L extlib \
   DBIx::Class::DeploymentHandler \
   DBIx::Class::EncodedColumn \
   DBIx::Class::TimeStamp \
+  File::Which \
   IPC::System::Simple \
   JavaScript::Minifier::XS \
   MooseX::Configuration
