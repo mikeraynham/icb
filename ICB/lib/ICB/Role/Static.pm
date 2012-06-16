@@ -29,13 +29,13 @@ has base        => (
     required    => 1,
 );
 
-has date_stamp  => (
+has date        => (
     is          => 'ro',
     isa         => 'Int',
     required    => 1,
 );
 
-has time_stamp  => (
+has time        => (
     is          => 'ro',
     isa         => 'Int',
     required    => 1,
@@ -92,8 +92,8 @@ sub _build_output_file {
     my $dir  = dir(
         $self->static_dir,
         $self->base,
-        $self->date_stamp,
-        $self->time_stamp,
+        $self->date,
+        $self->time,
     );
 
     $dir->mkpath( undef, '0755' );
@@ -140,6 +140,8 @@ sub _process_files {
 
     foreach ( @files ) {
         my $file    = file( $self->combine_dir, $self->base, $_ );
+        carp( "'$file' does not exist" ), next unless -f $file;
+
         my $content = $self->_process( $file );
         $combined  .= "$content\n";
     }
