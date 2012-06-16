@@ -1,7 +1,36 @@
-@icb-brown: #5f3817;
-@icb-cream: #eeedde;
-@icb-green: #a5b8a6;
+@import 'bootstrap.less';
+@import 'icb-variables.less';
 
 body {
-    background: @icb-cream;
+    background:     @icb-cream;
+}
+
+.navbar-fixed-top {
+    h1 {
+        height:         @logo_height;
+        width:          100%;
+        background:     url('/static/images/logo.png') no-repeat center top;
+        text-indent:    -9990px;
+        margin-top:     -5px;
+    }
+}
+
+.navbar {
+    .brand {
+        text-indent:    -9999px;
+        background:     url('/static/images/inca-cafe-bar.png') no-repeat left center;
+        width:          @icb_width;
+    }
+
+    .nav {
+        .active > a, .active > a:hover {
+            background-color: none;
+            border-bottom: 2px solid @icb-brown-dark;
+        }
+    }
+}
+
+.navbar-inner {
+    background:     url('/static/images/navbar.png') repeat-x left bottom;
+    
 }
