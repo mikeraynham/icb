@@ -160,8 +160,8 @@ sub handles_type {
     my $self = shift;
     my $type = shift;
 
-    return 1 if $self->content_type eq $type->{content_type};
-    return 1 if $self->file_type    eq $type->{file_type};
+    return 1 if $self->content_type eq ($type->{content_type} || '');
+    return 1 if $self->file_type    eq ($type->{file_type}    || '');
 }
 
 sub combine_and_create {

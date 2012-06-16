@@ -30,9 +30,14 @@ is( $css->_list_file,
 
 ok( $css->handles_type({
         content_type => 'text/css',
-        file_type    => 'css',
     }),
     'ICB::Static::CSS handles text/css'
+);
+
+ok( $css->handles_type({
+        file_type => 'css',
+    }),
+    'ICB::Static::CSS handles .css file type'
 );
 
 is_deeply(
