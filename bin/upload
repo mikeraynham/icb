@@ -1,10 +1,8 @@
-rsync -avz --delete ~/Catalyst/icb/ICB/extlib        root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/inc           root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/lib           root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/root          root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/script        root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/SQL           root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/shinycms.conf root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/Makefile.PL   root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-rsync -avz --delete ~/Catalyst/icb/ICB/Makefile      root@mikeraynham.co.uk:/srv/www/icb.co.uk/app
-
+rsync -avz --delete ~/Catalyst/icb/ICB/extlib        root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/inc           root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/lib           root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/root          root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/script        root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/icb.conf      root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/Makefile.PL   root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
+rsync -avz --delete ~/Catalyst/icb/ICB/Makefile      root@mikeraynham.co.uk:/srv/www/icb.co.uk/ICB
