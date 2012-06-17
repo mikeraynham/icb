@@ -1,4 +1,6 @@
 #!/usr/bin/env perl
+use FindBin;
+use local::lib "$FindBin::Bin/../extlib";
 
 use Catalyst::ScriptRunner;
 Catalyst::ScriptRunner->run('ICB', 'FastCGI');
