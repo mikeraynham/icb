@@ -1,22 +1,14 @@
 @icb_cream:             #eeedde;
-@icb_cream_dark:        #d4d3c5;
-@icb_cream_light:       #fffeed;
+@icb_cream_dark:        darken( @icb_cream, 10% );
+@icb_cream_light:       lighten( @icb_cream, 10% );
 
 @icb_brown:             #5f3817;
-@icb_brown_dark:        #452911;
-@icb_brown_light:       #78471d;
+@icb_brown_dark:        darken( @icb_brown, 10% );
+@icb_brown_light:       lighten( @icb_brown, 10% );
 
-@icb_green:             #195e17;
-@icb_green_dark:        #134511;
-@icb_green_light:       #195e17;
-
-@icb_blue:              #173d5e;
-@icb_blue_dark:         #112d45;
-@icb_blue_light:        #1d4d78;
-
-@icb_purple:            #5c175e;
-@icb_purple_dark:       #431145;
-@icb_purple_light:      #751d78;
+@icb_green:             #a5b8a6;
+@icb_green_dark:        darken( @icb_green, 10% );
+@icb_green_light:       lighten( @icb_green, 10% );
 
 @logo_width:            120px;
 @logo_height:           100px;
@@ -28,9 +20,11 @@
 
 @grayDarker:            @icb_brown_dark;
 @grayDark:              @icb_brown;
-@grayLighter:           @icb_cream_dark;
+@grayLighter:           @icb_brown_light;
 
 @serifFontFamily:       Amaranth, Georgia, "Times New Roman", Times, serif;
 @baseFontSize:          16px;
 @baseFontFamily:        @serifFontFamily;
 @baseLineHeight:        @baseFontSize * 1.5;
+
+@heroUnitBackground:    @icb_green;
