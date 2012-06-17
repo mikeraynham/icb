@@ -1,4 +1,4 @@
-function initialize() {
+function initialise() {
     var myLatLng = new google.maps.LatLng(53.257725,-2.122331);
 
     var myOptions = {
@@ -23,6 +23,10 @@ function initialize() {
         },
         1500
     );
+
+
 }
 
-window.onload = initialize;
+$(function() {
+    initialise();
+});

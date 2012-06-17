@@ -1,0 +1,29 @@
+: cascade wrapper
+: around body->{
+<h1>Contact</h1>
+
+
+<div class="row">
+    <div class="span4">
+        <dl>
+            <dt>Address</dt>
+            <dd>36-38 Sunderland Street</dd>
+            <dd>Macclesfield</dd>
+            <dd>SK11 6JL</dd>
+            <dt>Telephone</dt>
+            <dd>01625 439 187</dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:orders@incacafebar.com">orders@incacafebar.com</a></dd>
+        </dl>
+    </div>
+    <div class="span8">
+        <h2>Find us on the vibrant Sunderland Strip!</h2>
+        <div id="map_canvas"></div>
+    </div>
+</div>
+
+: }
+
+: around js->{
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoLHF__hkLdtQNs95PZw_kQ0etXGufKdI&sensor=false"></script>
+: }

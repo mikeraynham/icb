@@ -1,0 +1,318 @@
+: cascade wrapper
+: around body->{
+<h1>Food Menus</h1>
+
+<p>Choose from our selection of <a href="#breakfast">breakfasts</a>, <a href="#sandwiches">sandwiches</a>, and <a href="#spuds-toasties-paninis">spuds, toasties &amp; paninis</a>.</p>
+
+<p>You can place orders for eat-out food in advance by calling 01625 439 187, or emailing <a href="mailto:orders@incacafebar.com">orders@incacafebar.com</a>, before 10:30am.</p>
+
+<table id="breakfasts" class="table table-condensed">
+    <col width="15%" />
+    <col width="55%" />
+    <col width="10%" />
+    <caption>
+        Breakfasts<br />
+        <em>Served until 1:30pm</em>
+    </caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Item</th>
+            <th rowspan="2">Description</th>
+            <th colspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>Eat in</th>
+            <th>Eat out</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="item">The Works</td>
+            <td>Sausage &times; 2, bacon &times; 2, free range egg, Heinz beanz, toast</td>
+            <td>&pound;4.75</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="item">Veggie Brekky</td>
+            <td>Veggi sausage, Heinz beanz, free range egg, mushrooms, tomato, toast</td>
+            <td>&pound;4.75</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Brekky barms, toasties &amp; baguettes</td>
+            <td>One item</td>
+            <td>&pound;2.40</td>
+            <td>&pound;3.75</td>
+        </tr>
+        <tr>
+            <td>Two items</td>
+            <td>&pound;2.90</td>
+            <td>&pound;4.25</td>
+        </tr>
+        <tr>
+            <td>Extra items (each)</td>
+            <td>&pound;0.65</td>
+            <td>&pound;0.65</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="5">Toast</td>
+            <td>Rustic (brown or white)</td>
+            <td>&pound;0.65</td>
+            <td>&pound;0.90</td>
+        </tr>
+        <tr>
+            <td class="item">Gluten free</td>
+            <td>&pound;0.85</td>
+            <td>&pound;1.15</td>
+        </tr>
+        <tr>
+            <td>Artisan daily special (by <abbr title="Flower Water Salt">FWS</abbr>)</td>
+            <td>&pound;0.65</td>
+            <td>&pound;0.90</td>
+        </tr>
+        <tr>
+            <td>&hellip;honey, lime marmalade, marmalade, jam, chocolate spread</td>
+            <td>&pound;0.25</td>
+            <td>&pound;0.25</td>
+        </tr>
+        <tr>
+            <td>&hellip;tomato sauce &amp; brown sauce</td>
+            <td>free</td>
+            <td>free</td>
+        </tr>
+        <tr>
+            <td class="item">Porridge</td>
+            <td>With skimmed or semi-skimmed milk, and a choice of sugar or honey</td>
+            <td>&pound;1.95</td>
+            <td>&pound;2.95</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="sandwiches"  class="table table-condensed">
+    <col width="15%" />
+    <col width="55%" />
+    <col width="10%" />
+    <caption>
+        Sandwiches<br />
+        <em>Served until 4pm<br/>
+        Available on barms (brown or white), sliced bread (brown, white or <abbr title="Flower Water Salt">FWS</abbr> Artisan daily special), baguettes or wraps.</em>
+    </caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Item</th>
+            <th rowspan="2">Description</th>
+            <th colspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>Eat in</th>
+            <th>Eat out</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="item" rowspan="3">Chilli Tuna</td>
+            <td>Plain tuna with cream cheese, sweet chilli jam, cucumber onion &amp; lettuce</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm or wrap</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette or large sliced</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Pickled</td>
+            <td>Roast ham (Spearing&#8217;s), mature cheddar, branston pickle, tomato, red onion &amp; lettuce with butter</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm or wrap</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette or large sliced</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td  class="item"rowspan="3">Brie</td>
+            <td>Mango chutney mayo, &amp; salad</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm or wrap</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette or large sliced</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Coronation Chicken</td>
+            <td>Cucumber, onion &amp; lettuce</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm or wrap</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette or large sliced</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Mature Cheddar</td>
+            <td>Caramelised onion mayo &amp; salad</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm</td>
+            <td>&pound;3.95</td>
+            <td>&pound;2.50</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette</td>
+            <td>&pound;4.75</td>
+            <td>&pound;3.00</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Eggo</td>
+            <td>Egg mayo with tomato relish, cucumber &amp; lettuce</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&hellip;barm</td>
+            <td>&pound;3.75</td>
+            <td>&pound;2.00</td>
+        </tr>
+        <tr>
+            <td>&hellip;baguette</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.60</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="spuds-toasties-paninis" class="table table-condensed">
+    <col width="15%" />
+    <col width="55%" />
+    <col width="10%" />
+    <caption>Spuds, Toasties &amp; Paninis<br />
+        <em>Served until 4pm</em>
+    </caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Item</th>
+            <th rowspan="2">Description</th>
+            <th colspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>Eat in</th>
+            <th>Eat out</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="item" rowspan="6">Spuds</td>
+            <td>Plain</td>
+            <td>&pound;3.25</td>
+            <td>&pound;1.50</td>
+        </tr>
+        <tr>
+            <td>Cottage cheese, cheese, beans</td>
+            <td>&pound;4.95</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>Tuna (plain or mayo), cheesy beans</td>
+            <td>&pound;4.95</td>
+            <td>&pound;2.75</td>
+        </tr>
+        <tr>
+            <td>Zesty prawns in marie rose</td>
+            <td>&pound;5.50</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td>Chicken &amp; hot bacon</td>
+            <td>&pound;5.50</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td>&hellip;add sweet chilli jam, pesto butter, sweet corn, cheese, reggae reggae, balsamic, coriander, cranberry or mango chutney</td>
+            <td>&pound;0.20</td>
+            <td>&pound;0.20</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="7">Toasties</td>
+            <td>Mature cheddar cheese</td>
+            <td>&pound;</td>
+            <td>&pound;</td>
+        </tr>
+        <tr>
+            <td>Cheese &amp; ham</td>
+            <td>&pound;3.95</td>
+            <td>&pound;2.60</td>
+        </tr>
+        <tr>
+            <td>Brie, cranberry &amp; grapes</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.80</td>
+        </tr>
+        <tr>
+            <td>Cheese &amp; crispy bacon</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.80</td>
+        </tr>
+        <tr>
+            <td>Cheese &amp; mushroom</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.95</td>
+        </tr>
+        <tr>
+            <td><em>The Maccho:</em> Roast beef, cheese, mustard &amp; sweet chilli jam</td>
+            <td>&pound;4.95</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td>&hellip;add caramelized onion chutney, sweet chilli jam, pesto, onion, tomato, reggae reggae</td>
+            <td>&pound;0.20</td>
+            <td>&pound;0.20</td>
+        </tr>
+        <tr>
+            <td class="item" rowspan="3">Paninis</td>
+            <td><em>The Maccho:</em> Roast beef, cheese, mustard, &amp; sweet chilli jam</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td><em>Hey Pesto:</em> Roast chicken, green pesto, onion &amp; cheese</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+        <tr>
+            <td><em>Inca:</em> Roast veg, cheese, fresh basil &amp; tomatoes</td>
+            <td>&pound;5.25</td>
+            <td>&pound;3.20</td>
+        </tr>
+    </tbody>
+</table>
+
+
+: }

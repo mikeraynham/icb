@@ -1,14 +1,14 @@
-package ICB::Controller::Menu;
+package ICB::Controller::Contact;
 use Moose;
 use namespace::autoclean;
 
 use CatalystX::Routes;
-            
+
 BEGIN { extends 'Catalyst::Controller'; }
 
 =head1 NAME
 
-ICB::Controller::Menu - Catalyst Controller
+ICB::Controller::Contact - Catalyst Controller
 
 =head1 DESCRIPTION
 
@@ -23,12 +23,12 @@ Catalyst Controller.
 
 =cut
 
-get 'food'
+get '/contact'
     => sub {
     my $self = shift;
     my $c    = shift;
 
-    $c->stash( template => 'menu/food.tx' );
+    $c->stash( template => 'contact.tx' );
 };
 
 =head1 AUTHOR

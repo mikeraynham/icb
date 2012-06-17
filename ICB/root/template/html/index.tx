@@ -9,16 +9,16 @@
         <div class="row">
             <div class="span4">
                 <h2>It&#8217;s a café&hellip;</h2>
-                <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties.</p>
-                <p><a class="btn" href="#">View the menu »</a></p>
+                <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties. Make soggy supermarket sandwiches a thing of the past, and bring some life back into your lunchtime!</p>
+                <p><a class="btn" href="<: $c.uri_for( '/menu', 'food' ) :>">Food menus »</a></p>
             </div>
             <div class="span4">
                 <h2>It&#8217;s a bar&hellip;</h2>
-                <p>We don&#8217;t just serve great food.  We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders.</p>
+                <p>At night, Inca transforms into a bar with conversation, music and events. We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders. We also offer platters and nibbles for those wanting a bite to eat.</p>
             </div>
             <div class="span4">
                 <h2>It&#8217;s open&hellip;</h2>
-                <dl>
+                <dl class="compact">
                     <dt>Monday to Friday daytime</dt>
                     <dd>11am to 4pm</dd>
                     <dt>Wednesday to Sunday evening</dt>
@@ -28,8 +28,4 @@
                 </dl>
             </div>
         </div>
-: }
-
-: around js->{
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoLHF__hkLdtQNs95PZw_kQ0etXGufKdI&sensor=false"></script>
 : }

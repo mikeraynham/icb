@@ -8,7 +8,7 @@
 		<meta name="author" content="">
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
-        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120609', '183000', 'icb.css' ) :>" type="text/css" />
+        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120617', '200000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
 	<body>
@@ -21,10 +21,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="<: $c.uri_for( '/menu', 'breakfast' ) :>">Inca Café Bar</a>
+                    <a class="brand" href="<: $c.uri_for( '/' ) :>">Inca Café Bar</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li><a href="<: $c.uri_for( '/menu', 'breakfast' ) :>">Breakfast</a></li>
+                            <li><a href="<: $c.uri_for( '/menu', 'food' ) :>">Food Menus</a></li>
+                            <li><a href="<: $c.uri_for( '/contact' ) :>">Contact</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
