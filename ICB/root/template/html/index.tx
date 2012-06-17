@@ -1,22 +1,31 @@
 : cascade wrapper
 : around body->{
         <div class="hero-unit guitar">
-            <h1>Welcome to Inca Café Bar!</h1>
-            <p>Inca ca ca ca!</p>
+            <h1>Welcome to Inca Café Bar</h1>
+            <p>Inca Café Bar is a great place to eat, drink and relax.  We offer fair trade coffee, a range of teas, wines, ales and ciders, and a great selection of hearty food and delicious nibbles.</p>
+            <p>Come and visit us on Sunderland Street, Macclesfield.</p>
         </div>
 
         <div class="row">
             <div class="span4">
-                <h2>Its a café&hellip;</h2>
-                <p>Inca ca ca ca!</p>
+                <h2>It&#8217;s a café&hellip;</h2>
+                <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties.</p>
+                <p><a class="btn" href="#">View the menu »</a></p>
             </div>
             <div class="span4">
-                <h2>It's a bar&hellip;</h2>
-                <p>Inca ca ca ca!</p>
+                <h2>It&#8217;s a bar&hellip;</h2>
+                <p>We don&#8217;t just serve great food.  We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders.</p>
             </div>
             <div class="span4">
-                <h2>It's open &hellip;</h2>
-                <div id="old_map_canvas"></div>
+                <h2>It&#8217;s open&hellip;</h2>
+                <dl>
+                    <dt>Monday to Friday daytime</dt>
+                    <dd>11am to 4pm</dd>
+                    <dt>Wednesday to Sunday evening</dt>
+                    <dd>6pm to 10:30pm</dd>
+                    <dt>Treacle Market Sunday</dt>
+                    <dd>1:30pm to 10:30pm</dd>
+                </dl>
             </div>
         </div>
 : }
