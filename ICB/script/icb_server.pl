@@ -4,6 +4,9 @@ BEGIN {
     $ENV{CATALYST_SCRIPT_GEN} = 40;
 }
 
+use FindBin;
+use local::lib "$FindBin::Bin/../extlib";
+
 use Catalyst::ScriptRunner;
 Catalyst::ScriptRunner->run('ICB', 'Server');
 
