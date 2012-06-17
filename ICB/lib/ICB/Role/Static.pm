@@ -171,7 +171,7 @@ sub combine_and_create {
     return unless my $combined = $self->_combine_files();
 
     # Minify the combined and processed result.
-    return unless $self->minify( $combined );
+    return unless $combined = $self->minify( $combined );
 
     # Write the final result to the static file.
     my $fh = $self->output_file->openw();
