@@ -2,17 +2,18 @@
 @import 'icb-variables.less';
 
 body {
-    background:     @icb-cream;
+    background:     @icb_cream;
+}
+
+#logo {
+    display:        block;
+    padding:        0 0 30px (@icb_width - @logo_width)/2;
 }
 
 .navbar-fixed-top {
-    h1 {
-        height:         @logo_height;
-        width:          100%;
-        background:     url('/static/img/logo.png') no-repeat center top;
-        text-indent:    -9990px;
-        margin-top:     -5px;
-    }
+    background:     @icb_cream;
+    position:       static;
+    margin-bottom:  0 !important;
 }
 
 .navbar {
@@ -20,25 +21,21 @@ body {
         text-indent:    -9999px;
         background:     url('/static/img/inca-cafe-bar.png') no-repeat left center;
         width:          @icb_width;
-        height:         @icb_height;
-        margin-left:    10px;
-        padding:        10px 20px 10px 10px;
+        height:         30px;
+        margin:         0 20px 0 0;
+        padding:        8px 0 0 0;
+        line-height:    18px;
     }
 
     .nav {
         .active > a, .active > a:hover {
-            background-color: transparent;
+            background-color:   transparent;
         }
-    }
-
-    .nav > li > a {
-        padding-bottom: 2px;
     }
 }
 
 .navbar-inner {
     background:     url('/static/img/navbar.png') repeat-x left bottom;
-    
 }
 
 #map_canvas {

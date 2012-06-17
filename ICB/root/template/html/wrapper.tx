@@ -7,6 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
         <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120609', '183000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
@@ -30,10 +31,10 @@
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
-            <h1>Inca Café Bar</h1>
         </div>
 
         <div class="container">
+            <img id="logo" src="<: $c.uri_for('/static', 'img', 'logo.png') :>" width="120" height="100" alt="Inca Café Bar logo" />
             : block body->{}
         </div>
 
