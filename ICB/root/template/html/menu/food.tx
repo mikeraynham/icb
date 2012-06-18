@@ -262,13 +262,13 @@
         <tr>
             <td class="item" rowspan="7">Toasties</td>
             <td>Mature cheddar cheese</td>
-            <td>&pound;</td>
-            <td>&pound;</td>
+            <td>&pound;3.95</td>
+            <td>&pound;2.60</td>
         </tr>
         <tr>
             <td>Cheese &amp; ham</td>
-            <td>&pound;3.95</td>
-            <td>&pound;2.60</td>
+            <td>&pound;4.25</td>
+            <td>&pound;2.80</td>
         </tr>
         <tr>
             <td>Brie, cranberry &amp; grapes</td>
@@ -278,7 +278,7 @@
         <tr>
             <td>Cheese &amp; crispy bacon</td>
             <td>&pound;4.25</td>
-            <td>&pound;2.80</td>
+            <td>&pound;2.95</td>
         </tr>
         <tr>
             <td>Cheese &amp; mushroom</td>
