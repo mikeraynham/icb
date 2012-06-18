@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
-use FindBin;
-use local::lib "$FindBin::Bin/../extlib";
+use File::Spec::Functions qw/ splitpath catpath catfile rel2abs /;
+use lib catpath( (splitpath( rel2abs( __FILE__ )))[0,1], '../extlib/lib/perl5' );
+use lib catpath( (splitpath( rel2abs( __FILE__ )))[0,1], '../extlib/lib/perl5/i486-linux-gnu-thread-multi' );
 
 use Catalyst::ScriptRunner;
 Catalyst::ScriptRunner->run('ICB', 'FastCGI');
