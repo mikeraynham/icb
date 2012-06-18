@@ -9,7 +9,7 @@
         <meta name="google-site-verification" content="s1VDFUH1ZHg02Sq_SsTodS1tLeUjGHI9fAC9GjMIunA" />
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
-        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120618', '075000', 'icb.css' ) :>" type="text/css" />
+        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120618', '203000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
 	<body>
@@ -40,7 +40,24 @@
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         : block js->{}
-		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120618', '075000', 'icb.js' ) :>"></script>
+		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120618', '203000', 'icb.js' ) :>"></script>
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.incacafebar.com/" : "http://stats.incacafebar.com/");
+            document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+                piwikTracker.trackPageView();
+                piwikTracker.enableLinkTracking();
+            } catch( err ) {}
+        </script>
+        <noscript>
+            <p><img src="http://stats.incacafebar.com/piwik.php?idsite=8" style="border:0" alt="" /></p>
+        </noscript>
+        <!-- End Piwik Tracking Code -->
 
 	</body>
 </html>
