@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Inca Cafè Bar</title>
+		<title>Inca Café Bar</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -40,6 +40,38 @@
         <div class="container">
             : block body->{}
         </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <h3>Address</h3>
+                        <address>
+                            36-38 Sunderland Street<br />
+                            Macclesfield<br />
+                            SK11 6JL
+                        </address>
+                    </div>
+                    <div class="span4">
+                        <h3>Get in touch</h3>
+                        <p>01625 439 187</p>
+                        <p><a href="mailto:orders@incacafebar.com">orders@incacafebar.com</a></p>
+                    </div>
+                    <div class="span4">
+                        <h3>Opening hours</h3>
+                        <dl class="compact">
+                            <dt>Monday to Friday daytime</dt>
+                            <dd>11am to 4pm</dd>
+                            <dt>Wednesday to Sunday evening</dt>
+                            <dd>6pm to 10:30pm</dd>
+                            <dt>Treacle Market Sunday</dt>
+                            <dd>1:30pm to 10:30pm</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         : block js->{}

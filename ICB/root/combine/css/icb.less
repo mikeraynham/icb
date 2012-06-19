@@ -1,9 +1,9 @@
 @import 'bootstrap.less';
 @import 'icb-variables.less';
+@import 'icb-mixins.less';
 
 body {
     background:     @icb_cream;
-    padding-bottom: 40px;
 }
 
 .header {
@@ -64,8 +64,12 @@ body {
 
 
 .hero-unit {
+    outline:        1px dashed @icb_green_light;
+    outline-offset: -5px;
+    
     h1 {
         margin-bottom:  0.5em;
+        .text-shadow( 1px 1px 0 @icb_green_light );
     }
 }
 
@@ -96,6 +100,30 @@ body {
             text-transform: uppercase;
             width:          25%;
         }
+    }
+}
+
+.footer {
+    margin-top:     40px;
+    padding:        @baseLineHeight 0;
+    background:     @icb_green;
+    outline:        1px dashed @icb_green_light;
+    outline-offset: -5px;
+
+    a {
+        color:          @icb_cream;
+        :hover {
+            color:          @icb_cream_dark;
+        }
+    }
+    color:          @icb_cream;
+
+    address, p, dl {
+        font-size:      80%;
+    }
+
+    h2, h3, h4 {
+        .text-shadow( -1px -1px 0 @icb_green_dark );
     }
 }
 
