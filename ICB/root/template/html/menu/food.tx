@@ -42,7 +42,7 @@
             <td>-</td>
         </tr>
         <tr>
-            <td class="item" rowspan="3">Brekky barms, toasties &amp; baguettes</td>
+            <td class="item" rowspan="3">Brekky barms, toasties &amp; sliced breads</td>
             <td>One item</td>
             <td>&pound;2.40</td>
             <td>&pound;3.75</td>
@@ -99,7 +99,7 @@
     <caption>
         Sandwiches<br />
         <em>Served until 4pm<br/>
-        Available on barms (brown or white), sliced bread (brown, white or <abbr title="Flower Water Salt">FWS</abbr> Artisan daily special), baguettes or wraps.</em>
+        Available on barms (brown or white), sliced bread (brown, white or <abbr title="Flower Water Salt">FWS</abbr> Artisan daily special), or wraps.</em>
     </caption>
     <thead>
         <tr>
@@ -125,7 +125,7 @@
             <td>&pound;2.75</td>
         </tr>
         <tr>
-            <td>&hellip;baguette or large sliced</td>
+            <td>&hellip;sliced bread </td>
             <td>&pound;5.25</td>
             <td>&pound;3.20</td>
         </tr>
@@ -141,7 +141,7 @@
             <td>&pound;2.75</td>
         </tr>
         <tr>
-            <td>&hellip;baguette or large sliced</td>
+            <td>&hellip;sliced bread </td>
             <td>&pound;5.25</td>
             <td>&pound;3.20</td>
         </tr>
@@ -157,7 +157,7 @@
             <td>&pound;2.75</td>
         </tr>
         <tr>
-            <td>&hellip;baguette or large sliced</td>
+            <td>&hellip;sliced bread </td>
             <td>&pound;5.25</td>
             <td>&pound;3.20</td>
         </tr>
@@ -173,7 +173,7 @@
             <td>&pound;2.75</td>
         </tr>
         <tr>
-            <td>&hellip;baguette or large sliced</td>
+            <td>&hellip;sliced bread </td>
             <td>&pound;5.25</td>
             <td>&pound;3.20</td>
         </tr>
@@ -189,7 +189,7 @@
             <td>&pound;2.50</td>
         </tr>
         <tr>
-            <td>&hellip;baguette</td>
+            <td>&hellip;sliced bread</td>
             <td>&pound;4.75</td>
             <td>&pound;3.00</td>
         </tr>
@@ -205,7 +205,7 @@
             <td>&pound;2.00</td>
         </tr>
         <tr>
-            <td>&hellip;baguette</td>
+            <td>&hellip;sliced bread</td>
             <td>&pound;4.25</td>
             <td>&pound;2.60</td>
         </tr>
