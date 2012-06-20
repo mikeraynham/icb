@@ -45,21 +45,22 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="span4">
-                        <h3>Address</h3>
+                    <div class="span3">
+                        <h3>Find</h3>
                         <address>
+                            Inca Café Bar<br />
                             36-38 Sunderland Street<br />
                             Macclesfield<br />
                             SK11 6JL
                         </address>
                     </div>
-                    <div class="span4">
-                        <h3>Get in touch</h3>
+                    <div class="span3">
+                        <h3>Communicate</h3>
                         <p>01625 439 187</p>
                         <p><a href="mailto:orders@incacafebar.com">orders@incacafebar.com</a></p>
                     </div>
-                    <div class="span4">
-                        <h3>Opening hours</h3>
+                    <div class="span3">
+                        <h3>Enjoy</h3>
                         <dl class="compact">
                             <dt>Monday to Friday daytime</dt>
                             <dd>11am to 4pm</dd>

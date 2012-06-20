@@ -7,25 +7,14 @@
         </div>
 
         <div class="row">
-            <div class="span4">
+            <div class="span6">
                 <h2>It&#8217;s a café&hellip;</h2>
                 <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties. Make soggy supermarket sandwiches a thing of the past, and bring some life back into your lunchtime!</p>
                 <p><a class="btn" href="<: $c.uri_for( '/menu', 'food' ) :>">Food menus »</a></p>
             </div>
-            <div class="span4">
+            <div class="span6">
                 <h2>It&#8217;s a bar&hellip;</h2>
                 <p>At night, Inca transforms into a bar with conversation, music and events. We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders. We also offer platters and nibbles for those wanting a bite to eat.</p>
-            </div>
-            <div class="span4">
-                <h2>It&#8217;s open&hellip;</h2>
-                <dl class="compact">
-                    <dt>Monday to Friday daytime</dt>
-                    <dd>11am to 4pm</dd>
-                    <dt>Wednesday to Sunday evening</dt>
-                    <dd>6pm to 10:30pm</dd>
-                    <dt>Treacle Market Sunday</dt>
-                    <dd>1:30pm to 10:30pm</dd>
-                </dl>
             </div>
         </div>
 : }
