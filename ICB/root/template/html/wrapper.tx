@@ -9,7 +9,7 @@
         <meta name="google-site-verification" content="s1VDFUH1ZHg02Sq_SsTodS1tLeUjGHI9fAC9GjMIunA" />
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
-        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120619', '200000', 'icb.css' ) :>" type="text/css" />
+        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120620', '200000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
 	<body>
@@ -45,7 +45,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="span3">
+                    <div class="span4">
                         <h3>Find</h3>
                         <address>
                             Inca Café Bar<br />
@@ -54,20 +54,25 @@
                             SK11 6JL
                         </address>
                     </div>
-                    <div class="span3">
+                    <div class="span4">
                         <h3>Communicate</h3>
                         <p>01625 439 187</p>
                         <p><a href="mailto:orders@incacafebar.com">orders@incacafebar.com</a></p>
+                        <p>
+                            <a class="media-icon facebook" href="http://facebook.incacafebar.com">Facebook</a>
+                            <a class="media-icon twitter"  href="http://twitter.com/#!/incacafebar">Twitter</a>
+                            <a class="media-icon linkedin" href="http://uk.linkedin.com/pub/claire-kerkham/4a/80/a21">LinkedIn</a>
+                        </p>
                     </div>
-                    <div class="span3">
+                    <div class="span4">
                         <h3>Enjoy</h3>
                         <dl class="compact">
-                            <dt>Monday to Friday daytime</dt>
-                            <dd>11am to 4pm</dd>
-                            <dt>Wednesday to Sunday evening</dt>
-                            <dd>6pm to 10:30pm</dd>
+                            <dt>Monday&#8201;&#8211;&#8201;Friday day</dt>
+                            <dd>11am&#8201;&#8211;&#8201;4pm</dd>
+                            <dt>Wednesday&#8201;&#8211;&#8201;Sunday night</dt>
+                            <dd>6pm&#8201;&#8211;&#8201;10:30pm</dd>
                             <dt>Treacle Market Sunday</dt>
-                            <dd>1:30pm to 10:30pm</dd>
+                            <dd>1:30pm&#8201;&#8211;&#8201;10:30pm</dd>
                         </dl>
                     </div>
                 </div>
@@ -76,7 +81,7 @@
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         : block js->{}
-		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120619', '200000', 'icb.js' ) :>"></script>
+		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120620', '200000', 'icb.js' ) :>"></script>
 
         <!-- Piwik -->
         <script type="text/javascript">

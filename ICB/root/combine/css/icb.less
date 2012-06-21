@@ -103,6 +103,18 @@ body {
     }
 }
 
+.media-icon {
+    text-indent:    -9999px;
+    display:        block;
+    width:          24px;
+    height:         24px;
+    float:          left;
+
+    &.facebook { .media-sprite( 0, 0 ); margin-right: 5px; }
+    &.twitter  { .media-sprite( 0, 1 ); margin-right: 10px; }
+    &.linkedin { .media-sprite( 0, 2 ); }
+}
+
 .footer {
     margin-top:     40px;
     padding:        @baseLineHeight 0;

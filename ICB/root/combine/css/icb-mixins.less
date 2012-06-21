@@ -3,3 +3,9 @@
      -moz-text-shadow: @shadow;
           text-shadow: @shadow;
 }
+
+@sprite-grid: 24px;
+.media-sprite(@x, @y) {
+    background: url('/static/img/media-icons.png') no-repeat;
+    background-position: -(@x * @sprite-grid) -(@y * @sprite-grid);
+}
