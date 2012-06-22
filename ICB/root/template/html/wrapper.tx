@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE]>           <html lang="en-uk" class="no-js ie">                   <![endif]-->
+<!--[if lt IE 7]>      <html lang="en-uk" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-uk" class="no-js lt-ie9 lt-ie8">        <![endif]-->
+<!--[if IE 8]>         <html lang="en-uk" class="no-js lt-ie9">               <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-uk" class="no-js">                      <!--<![endif]-->
+<html lang="en-uk">
 	<head>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 		<meta charset="utf-8">
 		<title>Inca Café Bar</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +17,7 @@
         <meta name="google-site-verification" content="s1VDFUH1ZHg02Sq_SsTodS1tLeUjGHI9fAC9GjMIunA" />
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
-        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120621', '074500', 'icb.css' ) :>" type="text/css" />
+        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120621', '075000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
 	<body>
@@ -33,9 +41,9 @@
             </div>
         </div>
 
-        <div class="header">
+        <header class="header">
             <img class="logo" src="<: $c.uri_for('/static', 'img', 'logo.png') :>" width="120" height="100" alt="Inca Café Bar logo" />
-        </div>
+        </header>
 
         <div class="container">
             : block body->{}
@@ -63,6 +71,7 @@
                             <a class="media-icon twitter"  href="http://twitter.com/#!/incacafebar">Twitter</a>
                             <a class="media-icon linkedin" href="http://uk.linkedin.com/pub/claire-kerkham/4a/80/a21">LinkedIn</a>
                         </p>
+                        <div class="clearfix"></div>
                     </div>
                     <div class="span4">
                         <h3>Enjoy</h3>
@@ -81,7 +90,7 @@
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         : block js->{}
-		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120621', '074500', 'icb.js' ) :>"></script>
+		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120621', '075000', 'icb.js' ) :>"></script>
 
         <!-- Piwik -->
         <script type="text/javascript">

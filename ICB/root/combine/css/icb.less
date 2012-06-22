@@ -2,6 +2,16 @@
 @import 'icb-variables.less';
 @import 'icb-mixins.less';
 
+html.ie {
+    .hero-unit, .footer {
+        outline:        none;
+    }
+
+    .footer {
+        border-top:     5px solid @icb_green_dark;
+    }
+}
+
 body {
     background:     @icb_cream;
 }
@@ -66,7 +76,7 @@ body {
 .hero-unit {
     outline:        1px dashed @icb_green_light;
     outline-offset: -5px;
-    
+
     h1 {
         margin-bottom:  0.5em;
         .text-shadow( 1px 1px 0 @icb_green_light );
@@ -117,8 +127,8 @@ a.media-icon {
 }
 
 .footer {
-    margin-top:     40px;
-    padding:        @baseLineHeight 0;
+    margin:         40px 0 0 0;
+    padding:        @baseLineHeight 20px;
     background:     @icb_green;
     outline:        1px dashed @icb_green_light;
     outline-offset: -5px;
