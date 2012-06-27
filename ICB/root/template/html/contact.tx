@@ -1,4 +1,4 @@
-: cascade wrapper
+: cascade wrapper { title => 'Contact' }
 : around body->{
 <h1>Contact</h1>
 

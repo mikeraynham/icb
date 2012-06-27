@@ -1,4 +1,4 @@
-: cascade wrapper
+: cascade wrapper { title => 'Welcome' }
 : around body->{
         <div class="hero-unit guitar">
             <h1>Welcome to Inca Café Bar</h1>
@@ -7,20 +7,14 @@
         </div>
 
         <div class="row">
-            <div class="span4">
+            <div class="span6">
                 <h2>It&#8217;s a café&hellip;</h2>
                 <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties. Make soggy supermarket sandwiches a thing of the past, and bring some life back into your lunchtime!</p>
                 <p><a class="btn" href="<: $c.uri_for( '/menu', 'food' ) :>">Food menus »</a></p>
             </div>
-            <div class="span4">
+            <div class="span6">
                 <h2>It&#8217;s a bar&hellip;</h2>
                 <p>At night, Inca transforms into a bar with conversation, music and events. We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders. We also offer platters and nibbles for those wanting a bite to eat.</p>
-            </div>
-
-            <div class="span4">
-                <h2>Barnaby Festival</h2>
-                <p>During the <a href="http://www.barnabyfestival.org.uk/">Barnaby Festival</a> (Thursday 21 June to Sunday 24 June), we&#8217;ll be open from 11am until 11:30pm.</p>
-                <p>There&#8217;s lots going on at Inca, and around Macclesfield, so be sure to check it out.  We are proud to be displaying the &#8216;Feathers&#8217; exhibition artwork by <a href="http://www.erikadesign.com/">Erika Groeneveld</a>, so please feel free to come and browse.</p>
             </div>
         </div>
 : }

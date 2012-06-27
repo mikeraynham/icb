@@ -1,4 +1,4 @@
-: cascade wrapper
+: cascade wrapper { title => 'Food Menu' }
 : around body->{
 <h1>Food Menus</h1>
 
