@@ -1,20 +1,103 @@
 : cascade wrapper { title => 'Welcome' }
 : around body->{
-        <div class="hero-unit guitar">
-            <h1>Welcome to Inca Café Bar</h1>
-            <p>Inca Café Bar is a great place to eat, drink and relax.  We offer fair trade coffee, a range of teas, wines, ales and ciders, and a great selection of hearty food and delicious nibbles.</p>
-            <p>Come and visit us on Sunderland Street, Macclesfield.</p>
+        <div class="row">
+            <div class="span12">
+                <div id="myCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Inca Café  Bar</h4>
+                                <p>&copy; <a href="http://www.ithacaphotography.co.uk/">Ithaca Photography</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_making_coffee.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Making Coffee</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_cakes.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Cakes</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_crumpets.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Breakfast Crumpets</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_coffee.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Coffee</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_happy.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Happy</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_smile.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Smile</h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_anything_acoustic.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4><a href="http://www.anythingacoustic.com/">Anything Acoustic</a></h4>
+                                <p>&copy; <a href="http://stevethornhillphotographer-digitalartist.weebly.com/">Steve Thornhill Photographer - Digital Artist</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="<: $c.uri_for('/static', 'img', 'inca_cafe_bar_people_sign.jpg') :>">
+                            <div class="carousel-caption">
+                                <h4>Inca People</h4>
+                                <p>&copy; <a href="http://www.travellingsimon.com">Travelling Simon Photography</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
         </div>
 
+        <h1>Inca Café Bar</h1>
+
         <div class="row">
-            <div class="span6">
+            <div class="span4">
+                <h2>Eat, drink, relax</h2>
+                <p>Inca Café Bar is a great place to eat, drink and relax.  We offer fair trade coffee, a range of teas, wines, ales and ciders, and a great selection of hearty food and delicious nibbles.</p>
+                <p>Come and visit us on Sunderland Street, Macclesfield.</p>
+            </div>
+            <div class="span4">
                 <h2>It&#8217;s a café&hellip;</h2>
                 <p>During the day, we offer a great range of food, from hearty soups, sandwiches and spuds, to full English breakfasts and toasties. Make soggy supermarket sandwiches a thing of the past, and bring some life back into your lunchtime!</p>
                 <p><a class="btn" href="<: $c.uri_for( '/menu', 'food' ) :>">Food menus »</a></p>
             </div>
-            <div class="span6">
+            <div class="span4">
                 <h2>It&#8217;s a bar&hellip;</h2>
                 <p>At night, Inca transforms into a bar with conversation, music and events. We have a wide selection of wine, together with bottled beers and ales, and some traditional ciders. We also offer platters and nibbles for those wanting a bite to eat.</p>
             </div>
         </div>
+: }
+
+: around js->{
+        <script type="text/javascript">
+            $(function() {
+                $('.carousel').carousel();
+            });
+        </script>
 : }

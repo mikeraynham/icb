@@ -11,13 +11,12 @@
         <![endif]-->
 		<meta charset="utf-8">
         <title><: if $title { :><: $title :> | <: } :>Inca Café Bar</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
         <meta name="google-site-verification" content="s1VDFUH1ZHg02Sq_SsTodS1tLeUjGHI9fAC9GjMIunA" />
         <link rel="icon" type="image/png" href="<: $c.uri_for( 'favicon.png' ) :>">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic" type="text/css" />
-        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20120623', '074000', 'icb.css' ) :>" type="text/css" />
+        <link rel="stylesheet" href="<: $c.uri_for( '/static', 'css', '20121002', '160000', 'icb.css' ) :>" type="text/css" />
 	</head>
 
 	<body>
@@ -78,10 +77,8 @@
                         <dl class="compact">
                             <dt>Monday&#8201;&#8211;&#8201;Friday day</dt>
                             <dd>11am&#8201;&#8211;&#8201;4pm</dd>
-                            <dt>Wednesday&#8201;&#8211;&#8201;Sunday night</dt>
-                            <dd>6pm&#8201;&#8211;&#8201;10:30pm</dd>
-                            <dt>Treacle Market Sunday</dt>
-                            <dd>1:30pm&#8201;&#8211;&#8201;10:30pm</dd>
+                            <dt>Wednesday&#8201;&#8211;&#8201;Saturday night</dt>
+                            <dd>5pm&#8201;&#8211;&#8201;10:30pm</dd>
                         </dl>
                     </div>
                 </div>
@@ -90,7 +87,7 @@
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         : block js->{}
-		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20120623', '074000', 'icb.js' ) :>"></script>
+		<script type="text/javascript" src="<: $c.uri_for( '/static', 'js', '20121002', '160000', 'icb.js' ) :>"></script>
 
         <!-- Piwik -->
         <script type="text/javascript">

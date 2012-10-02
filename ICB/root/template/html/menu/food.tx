@@ -44,13 +44,13 @@
         <tr>
             <td class="item" rowspan="3">Brekky barms, toasties &amp; sliced breads</td>
             <td>One item</td>
-            <td>&pound;2.40</td>
             <td>&pound;3.75</td>
+            <td>&pound;2.40</td>
         </tr>
         <tr>
             <td>Two items</td>
-            <td>&pound;2.90</td>
             <td>&pound;4.25</td>
+            <td>&pound;2.90</td>
         </tr>
         <tr>
             <td>Extra items (each)</td>
@@ -60,18 +60,18 @@
         <tr>
             <td class="item" rowspan="5">Toast</td>
             <td>Rustic (brown or white)</td>
-            <td>&pound;0.65</td>
             <td>&pound;0.90</td>
+            <td>&pound;0.65</td>
         </tr>
         <tr>
             <td class="item">Gluten free</td>
-            <td>&pound;0.85</td>
             <td>&pound;1.15</td>
+            <td>&pound;0.85</td>
         </tr>
         <tr>
             <td>Artisan daily special (by <abbr title="Flower Water Salt">FWS</abbr>)</td>
-            <td>&pound;0.65</td>
             <td>&pound;0.90</td>
+            <td>&pound;0.65</td>
         </tr>
         <tr>
             <td>&hellip;honey, lime marmalade, marmalade, jam, chocolate spread</td>
@@ -86,8 +86,8 @@
         <tr>
             <td class="item">Porridge</td>
             <td>With skimmed or semi-skimmed milk, and a choice of sugar or honey</td>
-            <td>&pound;1.95</td>
             <td>&pound;2.95</td>
+            <td>&pound;1.95</td>
         </tr>
     </tbody>
 </table>

@@ -19,7 +19,7 @@ body {
 .header {
     margin:     0 auto;
     width:      940px;
-
+/*
     @media (min-width: 1200px) {
         width:      1170px;
     }
@@ -27,7 +27,7 @@ body {
     @media (max-width: 979px) {
         width:      auto;
     }
-
+*/
     .logo {
         display:        block;
         padding:        0 0 30px (@icb_width - @logo_width)/2;
@@ -63,36 +63,56 @@ body {
     background-image:       url('/static/img/navbar.png');
     background-repeat:      repeat-x;
     background-position:    left bottom;
-
+/*
     .container {
         @media (max-width: 979px) {
             padding-left: 20px;
             padding-right: 20px;
         }
     }
+*/
 }
 
+.carousel-caption {
+    p {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    a {
+        color: white;
+    }
+}
+
+.carousel-control {
+    font-size: 40px;
+}
 
 .hero-unit {
     outline:        1px dashed @icb_green_light;
     outline-offset: -5px;
 
     h1 {
+        font-size: 40px;
         margin-bottom:  0.5em;
         .text-shadow( 1px 1px 0 @icb_green_light );
-
+/*
         @media (max-width: 480px) {
             font-size:  @baseFontSize * 2;
         }
+*/
     }
 }
 
+/*
 .hero-unit.guitar{
-    @media (min-width: 786px) {
-        padding-right:  250px;
-        background:     @heroUnitBackground url('/static/img/guitar.png') no-repeat right top;
-    }
+//    @media (min-width: 786px) {
+        padding-right:  300px;
+        background:     @heroUnitBackground url('/static/img/guitar.png') no-repeat 676px center;
+//    }
 }
+*/
 
 .row {
     dl.compact {

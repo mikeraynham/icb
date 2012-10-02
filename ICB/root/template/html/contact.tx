@@ -26,4 +26,9 @@
 
 : around js->{
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoLHF__hkLdtQNs95PZw_kQ0etXGufKdI&sensor=false"></script>
+        <script type="text/javascript">
+            $(function() {
+                initialise_map();
+            });
+        </script>
 : }
